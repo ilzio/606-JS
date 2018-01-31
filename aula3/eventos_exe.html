@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<span id="um">Sou eu </span> 
+<input type="text" name="nome"> 
+<input type="text" name="nome"> 
+
+<p>Texto</p> 
+<div class="classe-comun"> div um </div> 
+<div class="classe-comun"> div dois</div>
+
+
+<ul>
+	<li>texto um</li>
+	<li>texto dois</li>
+</ul>
+
+<ul class="este">
+	<li>blue</li>
+	<li>red</li>
+	<li>green</li>
+	<li>pink</li>
+</ul>
+
+<ul class="todos">
+	<li>blue</li>
+	<li>red</li>
+	<li>green</li>
+	<li>pink</li>
+</ul>
+
+<ul class="irmaos">
+	<li>blue</li>
+	<li>red</li>
+	<li>green</li>
+	<li>pink</li>
+</ul>
+
+<script type="text/javascript">
+
+// selecionar o input
+
+
+
+
+
+
+// adicionar estilo
+
+
+function blurInput() {
+
+
+	input = $(this);
+	cor = input.val(); // so input tem val!!!!!!!
+	console.log(input, cor);
+	$('input').css('background-color', cor);
+}
+
+$('input').on( 'blur', blurInput );
+
+
+
+function cambiarColorEste() {
+	li = $(this);
+	valor = li.html();
+	li.css('color', valor);
+	}
+
+function cambiarColorTodos() {
+	li = $(this);
+	valor = li.html();
+	$('.todos li').css('color', valor);
+	}
+function cambiarColorIrmaos() {
+	li = $(this);
+	valor = li.html();
+	irmaos = $(this).siblings();
+	irmaos.css('color', valor);
+	}
+
+	
+$('.este li').on('click', cambiarColorEste);
+$('.todos li').on('click', cambiarColorTodos);
+$('.irmaos li').on('click', cambiarColorIrmaos);
+
+
+
+
+	
+
+
+</script>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	var idade = [11, 15 ,17, 29, 99];
+ 	window.alert(idade.lenght);
+ 	
+	function validaIdade(idadePorParametro) {
+		if (idadePorParametro < 16) {
+			window.alert('nao pode entrar');
+		} else if (idadePorParametro < 18) {
+			window.alert('pode entrar mas nao beber');
+		} else if (idadePorParametro < 99) {
+			window.alert('pode entrar e beber');
+
+		
+	} 
+}
+
+/*
+for (i = 0; i <= 4; i++) {
+	validaIdade(idade[i])
+}
+
+*/
+
+for (i = 0; i < idade.lenght; i++) {
+	validaIdade(idade[i])
+}
+
+</script>
+</body>
+</html>

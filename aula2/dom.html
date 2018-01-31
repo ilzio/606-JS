@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<span id="um">Sou eu </span> <!-- span#um -->
+<input type="text" name="nome"> <!-- input[name=nome] -->
+<p>Texto</p> <!-- p -->
+<div class="classe-comun">div um </div> <!-- div.classe-comun -->
+<div class="classe-comun" style="border: solid black 1px;"> div dois</div> <!-- div.classe-comun -->
+
+<ul>
+	<li>texto um</li>
+	<li>texto dois</li>
+</ul>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+document.getElementById('um');
+document.getElementsByClassName('classe-comun');
+document.getElementsByName('nome');
+document.getElementByTagname('p');
+
+var class = document.getElementsByClassName('classe-comun');
+class.classList.add('teste'); 
+class.classList.remove('teste'); 
+document.querySelector('div') // nao ta suportado en muitos navegadores [caniuse.com ve a compatibilidade]
+document.querySelectorAll('div') 
+document.querySelectorAll('.classe-comun') //selecionar por classe 
+document.querySelectorAll('[name="nome"]') //selecionar por atributos  
+document.write('')
+document.createElement('p');
+
+texto = document.createElement('p');
+
+texto
+texto.innerHTML = '<b>opa</>'
+
+
+document.querySelector('body').appendChild(texto); // pega elemento e adiciona no final do selectado
+document.querySelectorAll('div')[1] //pega so a segunda posicao do array
+
+/* adicionar texto dentro de un div (nesse caso o 2) sem apagar o texto inicial depois
+
+elemento = document.createElement('p') -> criar um elemento p
+
+elemento.innerHTML= 'ola' -> establecer o conteudo do elemento p
+
+target = document.querySelectorAll('div')[1] -> pegar o div para ser modificado
+
+target.appendChild(elemento) -> adicionar o elemento para o div selecionado 
+
+adicionar texto [antes] 
+
+mesma manera mas usa 
+
+target.insertBefore(elemento, alvo.childNodes) onde primero parametro e' que queremos inserir, o segundo parametro e' onde queremos inserir
+usar target = document.querySelectorAll('ul')
+precisa de especificar qual UL, ja que estamos selecionando todos 
+target[0].insertBefore(elemento, target[0].childNodes[0])
+
+tambem pode usar insertAdjacentElement (posicao, elemento) mas e pouco suportado 
+
+alvo.insertAdjacentElement('beforebegin', titulo)
+
+alvo.insertAdjacentElement('afterbegin', elemento)
+
+tambem e possivel fazer
+
+target.innerHtml = target.innerHtml + '<p> texto </p>' 
+
+*/
+
+
+
+</script>

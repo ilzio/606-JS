@@ -1,0 +1,18 @@
+.pr {
+	position: relative;
+}
+
+.pa {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.pf {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50vw;
+	height: 50vh;
+	background-color: red;
+}

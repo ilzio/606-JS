@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function pegarIdade() {
+	var idade = window.prompt();
+	window.alert( idade);
+	return idade;
+
+}
+	
+function validaIdade() {
+
+	if (idade >= 18) {
+		window.alert('pode entrar e beber');
+	} else if (idade >= 16 && a < 18) {
+		window.alert('pode entrar mas nao pode beber');
+	} else if (idade < 16) {
+		window.alert('nao pode entrar');
+	}
+}
+
+idade = pegarIdade(); // return devolve variavel que se vira global 
+validaIdade(idade);
+
+function soma(a, b) {
+	var resultado = a + b;
+	return resultado; // return pega o valor e dovolve pra onde foi chamado 
+}
+
+soma(5, 4);
+
+</script>
+
+</body>
+</html>
