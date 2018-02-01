@@ -1,0 +1,84 @@
+body {
+  background-color: blue;
+  overflow: scroll;
+}
+
+.slider {
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-imgs:before, slider-imgs:after {
+  content: " ";
+  display: table;
+}
+
+.slider-imgs {
+  width: 9999999px;
+  overflow: hidden;
+  border: solid black 3px;
+  vertical-align: middle;
+  margin: auto;
+  background-color: white;
+  /* apparentemente fondamentale */
+  position: relative;
+  transition: all 1s ease-out;
+  left: 0;
+
+}
+
+.slider-imgs:after {
+  clear: both;
+}
+
+.slide {
+  float: left;
+  max-width: 900px
+}
+
+img {
+  max-width: 100%;
+}
+
+.button-right {
+    right: 10px;
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+  border: solid black 2px;
+  border-radius: 50%;
+  background-color: grey;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.button-left {
+  left: 10px;
+  transform: rotate(180deg);
+}
+
+
+.slider-bullets {
+  text-align: center;
+
+}
+
+.slider-bullet {
+  width: 30px;
+  height:30px;
+  border-radius: 50px;;
+  background-color: pink;
+display: inline-block;
+margin: 4px;
+cursor: pointer;
+}
+
+.slider-bullet:hover {
+  background-color: white;
+}
