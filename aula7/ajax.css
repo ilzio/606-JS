@@ -1,0 +1,14 @@
+body {
+  background-color: lightgrey;
+}
+
+.contenitore {
+  border: solid black 2px;
+  max-width: 300px;
+  max-height: auto;
+
+}
+
+h1 {
+  display: inline-block;
+}

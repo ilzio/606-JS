@@ -24,7 +24,7 @@ body {
   background-color: white;
   /* apparentemente fondamentale */
   position: relative;
-  transition: all 1s ease-out;
+  transition: all 1s;
   left: 0;
 
 }
@@ -78,7 +78,7 @@ display: inline-block;
 margin: 4px;
 cursor: pointer;
 }
-
+.slider-bullet.is-active,
 .slider-bullet:hover {
   background-color: white;
 }
