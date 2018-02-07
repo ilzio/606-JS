@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Car Rental Landing Page</title>
+</head>
+
+<body>
+  <h1>Choose Your Car for Rent:</h1>
+
+  <form name="choose_car">
+    <label for="make">Make</label>
+    <select name="make" id="make">
+<option value="Audi">Audi</option>
+<option value="Ford">Ford</option>
+<option value="Toyota">Toyota</option>
+</select>
+
+    <input type="checkbox" name="newonly" id="newonly" />
+    <label for="newonly">New car only</label>
+
+    <label for="color">Color</label>
+    <select name="color" id="color">
+<option value="Black">Black</option>
+<option value="Red">Red</option>
+<option value="White">White</option>
+<option value="Silver">Silver</option>
+</select>
+
+    <input type="submit" value="Submit" />
+  </form>
+  <script src="exe.js"></script>
+
+  <script>
+    function makeChange() {
+
+      /* WRITE YOUR CODE HERE */
+      if (document.getElementById('#newonly').checked) {
+
+
+          if (document.getElementById('#make').value == "Audi") {
+          document.getElementById('#color').innerHTML ='<option value="Black">Black</option><option value="Red">Red</option><option value="White">White</option>';
+
+        } else if (document.getElementById('#make').value == "Ford") {
+          document.getElementById('#color').innerHTML = '<option value="Black">Black</option>';
+
+        } else if (document.getElementById('#make').value == "Toyota")
+          document.getElementById('#color').innerHTML = '<option value="Black">Black</option><option value="Silver">Silver</option>';
+        }
+       else {
+        document.getElementById('#color').innerHTML ='<option value="Black">Black</option><option value="Red">Red</option><option value="White">White</option><option value="Silver">Silver</option>';
+      }
+
+    }
+
+    // invece di fare due onchange, fai due chiamate della funzione, e funziona -> come esercizio consiglia PORCO DIO
+    document.getElementById('make').onchange = makeChange;
+    document.getElementById('newonly').onchange = makeChange;
+  </script>
+</body>
+
+</html>
