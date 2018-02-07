@@ -1,4 +1,5 @@
 // www.youmightnotneedjquery.com
+http://www.fakemailgenerator.com/inbox/einrot.com/zzarazzio/
 
 
                             // funcoes nativas para strings
